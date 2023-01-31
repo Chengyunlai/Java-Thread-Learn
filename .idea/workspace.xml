@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33b974c6-2b80-4ccb-b77d-63715056002f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/callable/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/exception/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/exception/UncaughtExceptionHandleUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/exector/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/extendThread/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/join/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/lock/InterruptDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/lock/ReentrantLockDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/sleep/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/syn/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/utils/DaemonThreadFactory.java" afterDir="false" />
+    <list default="true" id="33b974c6-2b80-4ccb-b77d-63715056002f" name="Changes" comment="线程基础">
+      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/resource/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/resource/EvenChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/resource/EvenGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/resource/IntGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/threadDemo/resource/ThreadTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/threadDemo/normal/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/threadDemo/normal/Demo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +57,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.threadDemo.exception.Demo">
+  <component name="RunManager" selected="Application.threadDemo.resource.Demo">
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="threadDemo.extendThread.Demo" />
       <module name="Thread" />
@@ -79,12 +71,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="threadDemo.callable.Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="threadDemo.callable.Demo" />
+    <configuration name="EvenGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="threadDemo.resource.EvenGenerator" />
       <module name="Thread" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="threadDemo.callable.*" />
+          <option name="PATTERN" value="threadDemo.resource.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="threadDemo.extendThread.Demo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="threadDemo.extendThread.Demo" />
+    <configuration name="threadDemo.resource.Demo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="threadDemo.resource.Demo" />
       <module name="Thread" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="threadDemo.extendThread.*" />
+          <option name="PATTERN" value="threadDemo.resource.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="threadDemo.extendThread.Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="threadDemo.extendThread.Demo" />
+    <configuration name="threadDemo.resource.Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="threadDemo.resource.Demo" />
       <module name="Thread" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="threadDemo.extendThread.*" />
+          <option name="PATTERN" value="threadDemo.resource.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.threadDemo.resource.Demo" />
+        <item itemvalue="Application.threadDemo.resource.Demo (1)" />
+        <item itemvalue="Application.EvenGenerator" />
         <item itemvalue="Application.threadDemo.exception.Demo" />
         <item itemvalue="Application.Demo" />
-        <item itemvalue="Application.threadDemo.extendThread.Demo" />
-        <item itemvalue="Application.threadDemo.extendThread.Demo (1)" />
-        <item itemvalue="Application.threadDemo.callable.Demo" />
       </list>
     </recent_temporary>
   </component>
@@ -157,8 +149,17 @@
       <workItem from="1674783581362" duration="9059000" />
       <workItem from="1674871135853" duration="2968000" />
       <workItem from="1674980116378" duration="7810000" />
-      <workItem from="1675044395787" duration="7497000" />
+      <workItem from="1675044395787" duration="16041000" />
+      <workItem from="1675131647505" duration="763000" />
     </task>
+    <task id="LOCAL-00001" summary="线程基础">
+      <created>1675070800182</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675070800182</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,5 +175,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="线程基础" />
+    <option name="LAST_COMMIT_MESSAGE" value="线程基础" />
   </component>
 </project>
