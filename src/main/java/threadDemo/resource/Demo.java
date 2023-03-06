@@ -3,6 +3,8 @@ package threadDemo.resource;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @ClassName
@@ -12,11 +14,18 @@ import java.util.concurrent.TimeUnit;
  * @Version 1.0
  **/
 public  class Demo {
+
+    private Lock lock = new ReentrantLock();
     private  int num = 5;
 
-    public synchronized int sub() {
-        --num;
-        return num;
+    public  int sub() {
+        lock.lock();
+        try {
+            --num;
+            return num;
+        }finally {
+            lock.unlock();
+        }
     }
 
     static  class Thread1 extends Thread{
@@ -47,7 +56,7 @@ public  class Demo {
     public static void main(String[] args) throws InterruptedException {
         Demo demo = new Demo();
         ExecutorService executorService = Executors.newCachedThreadPool();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             executorService.execute(new Thread1 (demo));
         }
         executorService.shutdown();
